@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 280px;
+            height: 320px;
+            background-color: aqua;
+            padding: 1%;
+            border-radius: 15px;
+            margin-left: 40%;
+            margin-top: 12%;
+            
+        }
+        #cngcolor{
+            width: 150px;
+            height: 50px;
+            border: 5px solid#070ff6;
+            border-radius: 10px;
+            margin-left: 22%;  
+        }
+        h1{
+            color: #ee4646;
+            margin-left: 10%;
+        }
+        h2{
+            color: rgb(185, 9, 9);
+            margin-left: 27%;
+        }
+        #colorcode{
+            margin-left: 35%;
+            color: black;
+        }
+        button{
+            height: 40px;
+            width: 120px;
+            border-radius: 10px;
+            border: 5px solid rgb(236, 184, 13);
+            margin-left: 27%;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        @media (max-width:200px){
+         body{
+            background-color: chartreuse;
+         }
+        }
+    </style>
+</head>
+<body id="bgcolor">
+   
+    <div class="main" id="bgdiv">
+    <h1> My Color Picker</h1><br>
+    
+    <input type="color" id="cngcolor" ><br>
+   <h2>Color Code</h2> <h2 id="colorcode">#0000</h2>
+    <button onclick="colorpicker()">Change Color!</button>
+    </div>
+    <script>
+        function colorpicker(){
+            let colour=document.getElementById("cngcolor").value;
+            let bodybg=document.getElementById("bgcolor");
+            let ccode=document.getElementById("colorcode");
+            let divbgcolor=document.getElementById("bgdiv");
+            bodybg.style.backgroundColor = colour;
+        //    divbgcolor.style.backgroundColor = colour;
+            ccode.innerText = colour;
+        }
+    </script>
+    
+</body>
+</html>
